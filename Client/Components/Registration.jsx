@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; 
 import "./Register.css";
-
+import { Link } from 'react-router-dom';
 const Registration = () => {
   const [fields, setFields] = useState({
     name: "",
@@ -19,6 +19,7 @@ const Registration = () => {
       e.preventDefault();
       const data = await axios.post(API_URL, fields); 
       console.log(data);
+      alert("submitted")
     } catch (error) {
       console.log(error);
     }
@@ -57,6 +58,10 @@ const Registration = () => {
           <button type="submit" className="register" >
             Register
           </button>
+          <Link to = "/">
+
+          <p>already a user,login</p>
+          </Link>
         </form>
       </div>
     </div>
