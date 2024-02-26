@@ -1,6 +1,4 @@
-# Client Project
 
-This is a React client project created with Vite.
 
 ## Installation
 
