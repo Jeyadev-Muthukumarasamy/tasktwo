@@ -1,0 +1,12 @@
+.logininput{
+    height: 40px;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.signin{
+    margin-top: 20px;
+    background-color: rgb(47, 47, 227);
+    color: white;
+}
