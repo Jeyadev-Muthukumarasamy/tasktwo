@@ -3,7 +3,7 @@ import "./Login.css";
 import axios from 'axios';
 import Product from './Product'; 
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 const Login = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
@@ -28,6 +28,7 @@ const Login = () => {
             localStorage.setItem("token", response.data.token.accessToken);
             localStorage.setItem("userId",response.data.userId)
             setUserId(response.data.userId);
+
             console.log(response.data.userId,"user")
             
             
@@ -52,6 +53,10 @@ const Login = () => {
             </form>
             {console.log(userId,"from bottom") }
              {userId && <Product userId={userId} />} 
+             <Link to = "/signup">
+             <p>Not a user then sign up</p>
+             </Link>
+            
             
         </div>
         
